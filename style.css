@@ -1,0 +1,223 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 auto;
+  padding: 0 30px; 
+  font-size: large;
+  background: #b5d0df;
+  color: rgb(175, 104, 104);
+}
+
+
+
+/*** HEADER AREA ***/
+header {
+  height: 100vh;
+  position: relative;
+  background: #b5d0df;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*To center the header*/
+header h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Top right */
+header nav {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav a {
+  text-decoration: none;
+  color: rgb(175, 104, 104);
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color: #e63946;
+}
+
+/* Drop cap layout */
+.hero-name {
+  display: flex;
+  align-items: flex-end;
+  line-height: 1;
+  margin-top: 60px;
+}
+
+.dropcap {
+  font-size: 6rem;
+  font-weight: bold;
+  color: rgb(175, 104, 104);
+  line-height: 1;
+}
+
+.name-lines {
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  color: rgb(175, 104, 104);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: rgb(175, 104, 104);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+
+
+/*** BODY AREA ***/
+h2 {
+    text-align: center;
+}
+
+.spaceSections {
+  font-weight: bold;
+  color: rgb(175, 104, 104);
+  line-height: 1;
+}
+
+/* Skills section */
+.skills-section {
+  text-align: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.skills-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #97b8ca;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.skills-buttons button:hover {
+  background-color: #7aa1b1;
+}
+
+.skill-display {
+  margin-top: 30px;
+  font-size: 1.2rem;
+}
+
+.progress-bar {
+  width: 0;
+  height: 25px;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  transition: width 1s ease;
+  text-align: center;
+  color: white;
+  line-height: 25px;
+  font-weight: bold;
+}
+
+.progress-container {
+  width: 50%;
+  height: 25px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+
+
+/* Projects section */
+.project-card {
+  background: white;
+  padding: 20px;
+  margin: 10px 0;
+  border-left: 5px solid #007BFF;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+
+/* Scroll Button */
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #0056b3;
+}
+
+
+
+/*** FOOTER AREA ***/
+.footer-container {
+  text-align: center;
+  padding: 30px 20px;
+  background: #b5d0df;
+}
+
+.footer-icons {
+  margin-bottom: 15px;
+}
+
+.footer-icons a {
+  text-decoration: none;
+  color: #6b7280;
+  margin: 0 15px;
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.footer-icons a:hover {
+  color: #e63946;
+}
+
+.footer-text {
+  font-family: monospace;
+  color: #1e3a8a;
+  font-size: 14px;
+  margin: 5px 0;
+}

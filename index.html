@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leen Al Harash | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="hero-header">
+        <nav>
+            <ul>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-name">
+            <span class="dropcap">L</span>
+            <div class="name-lines">
+                <div>EEN AL HARASH's</div>
+                <div>PORTFOLIO</div>
+            </div>
+        </div>
+        <div class="subtitle"> APPLICATION AND WEB DEVELOPER </div> 
+    </header>
+
+
+    <section id="skills" class="spaceSections">
+        <h2>SKILLS</h2>
+        
+        <!-- Percentage bar -->
+        <div class="skill-display">
+            <p style="margin-left: 20%;">How good am I ?</p> 
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+
+        <div class="skills-buttons" style="margin-left: 25%; max-width: 950px;">
+            <button onclick="showSkill('html')">HTML5</button>
+            <button onclick="showSkill('css')">CSS3</button>
+            <button onclick="showSkill('js')">JAVASCRIPT</button>
+            <button onclick="showSkill('python')">PYTHON</button>
+            <button onclick="showSkill('kotlin')">KOTLIN</button>
+            <button onclick="showSkill('jfx')">JAVA FX </button>
+            <button onclick="showSkill('php')">PHP</button>
+            <button onclick="showSkill('sql')">SQL</button>
+
+            <button onclick="showSkill('angular')">ANGULAR</button>
+            <button onclick="showSkill('laravel')">LARAVEL</button>
+            <button onclick="showSkill('springb')">SPRING BOOT</button>
+            <button onclick="showSkill('oop')">OOP</button>
+            <button onclick="showSkill('linux')">LINUX</button>
+            <button onclick="showSkill('c')">C#</button>
+        </div>
+    </section>
+
+    <br> <br>
+    <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Description of your project goes here.</p>
+        </div>
+    
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Description of your project goes here.</p>
+        </div>
+    
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Description of your project goes here.</p>
+        </div>
+    
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Description of your project goes here.</p>
+        </div>
+    
+        <div class="project-card">
+            <h3>Project Title</h3>
+            <p>Description of your project goes here.</p>
+        </div>
+    </section>
+
+    <br> <br>
+    <section id="contact">
+        <h2>GET IN TOUCH</h2>
+        <p style="margin-left: 25%;"> Got a job opportunity or a project in mind? I’d love to hear from you — feel free to drop a message. </p>
+        <!--Social media info-->
+        <div class="footer-container">
+            <div class="footer-icons">
+                <a href="mailto:leen.zh.2004@gmail.com">
+                <i class="fas fa-envelope"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/">
+                    <i class="fab fa-linkedin"></i>
+                </a> 
+                
+                <a href="https://github.com/LeenAlHarash">
+                    <i class="fab fa-github"></i>
+                </a>
+
+                <a href="https://www.instagram.com/_llleennn/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                
+                <a href="https://discordid.netlify.app/?id=1077390981688729702">
+                    <i class="fab fa-discord"></i>
+                </a>
+
+
+            </div>
+
+            <p class="footer-text">Leen Al Harash's Portfolio</p>
+            <p class="footer-text">©2025 present, All rights reserved</p>
+        </div>
+    </section>
+
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+    <script src="script.js"></script>
+</body>
+</html>
