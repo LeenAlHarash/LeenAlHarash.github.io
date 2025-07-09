@@ -147,24 +147,61 @@ h2 {
 
 
 /* Projects section */
-.project-card {
-  background: white;
-  padding: 20px;
-  margin: 10px 0;
-  border-left: 5px solid #007BFF;
-}
-
-form {
+.projects-container {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin: auto;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+.project-card h3 {
+  text-align: center;
+  margin-top: 0;
+  color: #333;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 220px;
+  border-left: 6px solid #a4c1d1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.prjct-buttons {
+  margin: 5px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  background-color: #97b8ca;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.prjct-buttons:hover {
+  background-color: #7aa1b1;
 }
 
 
