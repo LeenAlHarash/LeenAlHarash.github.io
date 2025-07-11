@@ -1,46 +1,79 @@
-// SCROLL BUTTON
-const scrollBtn = document.getElementById("scrollToTopBtn");
-
-// Show after scrolling 300px
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-        scrollBtn.style.display = "block";
-    } else {
-        scrollBtn.style.display = "none";
-    }
-});
-
-// Smooth scroll to top when button is clicked
-scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-});
-
-
 // SKILL %%%
-function showSkill(skill) {
-  const skillLevels = {
-    php: 40,
-    c: 45,
-    python: 50,
-    angular: 65,
-    laravel: 65,
-    js: 70,
-    sql: 75,
-    oop: 75,
-    linux: 75,
-    css: 80,
-    kotlin: 85,
-    jfx: 85,
-    springb: 85,
-    html: 90
-  };
 
-  const percent = skillLevels[skill];
+const skills = {
+  html: {
+    percent: 90,
+    svg: `HTML`
+  },
+  css: {
+    percent: 80,
+    svg: `CSS`
+  },
+  js: {
+    percent: 70,
+    svg: `JS`
+  },
+  kotlin: {
+    percent: 85,
+    svg: `KOTLIN`
+  },
+  jfx: {
+    percent: 85,
+    svg: `JFX`
+  },
+  php: {
+    percent: 40,
+    svg: `PHP`
+  },
+  cS: {
+    percent: 45,
+    svg: `C#`
+  },
+  python: {
+    percent: 55,
+    svg: `PYTHON`
+  },
+  angular: {
+    percent: 65,
+    svg: `ANGULAR`
+  },
+  laravel: {
+    percent: 65,
+    svg: `LARAVEL`
+  },
+  sql: {
+    percent: 75,
+    svg: `SQL`
+  },
+  oop: {
+    percent: 75,
+    svg: `OOP`
+  },
+  linux: {
+    percent: 75,
+    svg: `LINUX`
+  },
+  springB: {
+    percent: 85,
+    svg: `SPRING BOOT`
+  },
+  git: {
+    percent: 80,
+    svg: `GIT`
+  },
+};
 
-  const progressBar = document.getElementById("progressBar");
-  progressBar.textContent = percent + "%";
-  progressBar.style.width = percent + "%";
+const container = document.querySelector(".skills-grid");
+
+for (let key in skills) {
+  const { percent, svg } = skills[key];
+
+  const skillDiv = document.createElement("div");
+  skillDiv.className = "skill";
+  skillDiv.innerHTML = `
+      <div class="icon">${svg}</div>
+      <div class="percent">${percent}%</div>
+    `;
+
+  container.appendChild(skillDiv);
 }

@@ -3,9 +3,9 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
   color: rgb(175, 104, 104);
-  background: linear-gradient(-45deg, #ebd0d0, #cdceee73);
+  background: linear-gradient(-45deg, #f0dada, #cdceee73);
   background-size: 400% 400%;
-  animation: gradientBG 5s ease infinite;
+  animation: gradientBG 4s ease infinite;
   transition: background 1s ease;
 }
 
@@ -293,4 +293,70 @@ header nav a:hover {
   color: #1e3a8a;
   font-size: 14px;
   margin: 5px 0;
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns */
+  gap: 20px;
+  justify-content: center;
+  margin: 50px auto;
+  max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill:hover {
+  transform: scale(1.10);
+}
+
+.icon {
+  transition: opacity 0.5s ease;
+}
+
+.percent {
+  position: absolute;
+  background: rgba(216, 164, 164, 0.95);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.skill:hover .percent {
+  opacity: 1;
 }
