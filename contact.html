@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Leen Al Harash | Contact me</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -23,31 +24,64 @@
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
-    
-    
-        <h2>GET IN TOUCH!</h2>
-        <p> Got a job opportunity or a project in mind? I’d love to hear from you.</p>
-        <!--Social media info-->
-        <div class="footer-container">
-            <div class="footer-icons">
-                <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-    
-                <a href="https://github.com/LeenAlHarash">
-                    <i class="fab fa-github"></i>
-                </a>
-    
-                <a href="https://discordid.netlify.app/?id=1077390981688729702">
-                    <i class="fab fa-discord"></i>
-                </a>
-            </div>
-        </div>
+
+        <section class="contact-section">
+            <h2>GET IN TOUCH!</h2>
+
+            <form id="contactForm">
+                <p>Got a job opportunity or a project in mind? I’d love to hear from you.</p>
+
+                <div class="form-group">
+                    <label for="user_name">Name :</label>
+                    <input type="text" id="user_name" name="name" placeholder="Your name.." />
+                </div>
+
+                <div class="form-group">
+                    <label for="user_email">Email :</label>
+                    <input type="email" id="user_email" name="from_email" placeholder="example@gmail.com" />
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea id="message" name="message" placeholder="Tell me your idea.."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+
+            <div id="alertBox" class="alert-box">Message sent!</div>
+        </section>
     </header>
 
 
     <div class="footer-container">
         <p class="footer-text">©2025, All rights reserved</p>
     </div>
+
+    <!--Script for email and alert-->
+    <script>
+        emailjs.init('kMXGNMSE1YJZuFpfD');
+
+        function showAlert(message) {
+            const alertBox = document.getElementById('alertBox');
+            alertBox.textContent = message;
+            alertBox.classList.add('show');
+            setTimeout(() => {
+                alertBox.classList.remove('show');
+            }, 3000);
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm('service_pmkqfwn', 'template_usgb4rm', this)
+                .then(function () {
+                    showAlert('Message sent successfully!');
+                    document.getElementById('contactForm').reset();
+                }, function (error) {
+                    showAlert('Error: ' + error.text);
+                });
+        });
+    </script>
 </body>
 </html>
