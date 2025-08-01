@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Leen Al Harash | Projects</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=project.css>
 </head>
 
 <body>
@@ -23,16 +22,20 @@
                 <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
+    </header>
 
-        <section id="projects" class="spaceSections">
-            <h2>MY PROJECTS</h2>
-            <div class="projects-container">
-        
+    <section id="projects">
+        <h2>MY PROJECTS</h2>
+        <!--arrows left and right-->
+        <div id="prev" class="carousel-nav">&#10094;</div>
+        <div id="next" class="carousel-nav">&#10095;</div>
+
+        <div class="projects-container">
+            <div class="projects-container-inner">
                 <!-- Green Pulse -->
                 <div class="project-container">
                     <div class="project-image-wrapper">
-                        <img src="gifs/GreenPulse.gif" alt="2D Cowboy Hero" class="project-image" />
-                        <div class="image-overlay"></div>
+                        <img src="gifs/GreenPulse.gif" alt="Green Pulse" class="project-image" />
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Green Pulse</h3>
@@ -52,12 +55,12 @@
                         </div>
                     </div>
                 </div>
-        
+
+
                 <!-- 2D Cowboy Hero -->
                 <div class="project-container">
                     <div class="project-image-wrapper">
                         <img src="gifs/2D Cowboy.gif" alt="2D Cowboy Hero" class="project-image" />
-                        <div class="image-overlay"></div>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">2D Cowboy Hero</h3>
@@ -73,18 +76,18 @@
                         </div>
                     </div>
                 </div>
-        
+
+
                 <!-- Snake -->
                 <div class="project-container">
                     <div class="project-image-wrapper">
                         <img src="gifs/snake.gif" alt="Snake Game" class="project-image" />
-                        <div class="image-overlay"></div>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Snake</h3>
                         <p class="project-description">
-                            An online game where the player guides a growing snake to eat the apple. The goal is to make the
-                            snake as large as possible before it collides with itself.
+                            An online game where the player guides a growing snake to eat the apple. The goal is to make
+                            the snake as large as possible before it collides with itself.
                         </p>
                         <div class="project-tags">
                             <span>HTML</span>
@@ -98,18 +101,18 @@
                         </div>
                     </div>
                 </div>
-        
+
+
                 <!-- Music Library -->
                 <div class="project-container">
                     <div class="project-image-wrapper">
                         <img src="gifs/MusicLibrary.gif" alt="Music Library App" class="project-image" />
-                        <div class="image-overlay"></div>
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Music Library</h3>
                         <p class="project-description">
-                            A modern Android music app supporting English and French. Browse by artist or genre, search, toggle
-                            dark mode, and change languages dynamically.
+                            A modern Android music app supporting English and French. Browse by artist or genre, search,
+                            toggle dark mode, and change languages dynamically.
                         </p>
                         <div class="project-tags">
                             <span>KOTLIN</span>
@@ -121,18 +124,17 @@
                         </div>
                     </div>
                 </div>
-        
+
+                
                 <!-- Tic Tac Toe -->
                 <div class="project-container">
                     <div class="project-image-wrapper">
-                        <img src="gifs/ticTacToe.gif" alt="Tic Tac Toe" class="project-image" />
-                        <div class="image-overlay"></div>
+                        <img src="gifs/TICTACTOE.gif" alt="Tic Tac Toe" class="project-image" />
                     </div>
                     <div class="project-details">
                         <h3 class="project-title">Tic Tac Toe</h3>
                         <p class="project-description">
-                            A classic game where you play against a robot that blocks moves strategically. Supports English,
-                            French, and Spanish.
+                            A classic game where you play against a robot that blocks moves strategically. Supports English, French, and Spanish.
                         </p>
                         <div class="project-tags">
                             <span>KOTLIN</span>
@@ -145,12 +147,34 @@
                     </div>
                 </div>
             </div>
-        </section>
-    </header>
-
+        </div>
+    </section>
 
     <div class="footer-container">
         <p class="footer-text">©2025, All rights reserved</p>
     </div>
+
+    <!--Java Script - carousel-->
+    <script>
+        const innerContainer = document.querySelector('.projects-container-inner');
+        const projects = document.querySelectorAll('.project-container');
+        let index = 0;
+
+        function showProject(i) {
+            innerContainer.style.transform = `translateX(-${i * 100}%)`;
+        }
+
+        document.getElementById('next').addEventListener('click', () => {
+            index = (index + 1) % projects.length;
+            showProject(index);
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            index = (index - 1 + projects.length) % projects.length;
+            showProject(index);
+        });
+
+        showProject(index);
+    </script>
 </body>
 </html>
