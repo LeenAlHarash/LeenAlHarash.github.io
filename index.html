@@ -13,30 +13,100 @@
     <header class="hero-header">
         <nav>
             <ul class="nav-left">
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html" data-i18n="nav_home">HOME</a></li>
             </ul>
             <ul class="nav-right">
-                <li><a href="about.html">ABOUT ME</a></li>
-                <li><a href="skills.html">SKILLS</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="about.html" data-i18n="nav_about">ABOUT ME</a></li>
+                <li><a href="skills.html" data-i18n="nav_skills">SKILLS</a></li>
+                <li><a href="projects.html" data-i18n="nav_projects">PROJECTS</a></li>
+                <li><a href="contact.html" data-i18n="nav_contact">CONTACT</a></li>
             </ul>
         </nav>
 
         <div class="hero-content">
             <div class="hero-name">
                 <div class="name-lines">
-                    <div>HELLO AND WELCOME TO</div>
-                    <div>MY PORTFOLIO  ✿</div>
+                    <div data-i18n="hero_line1">HELLO AND WELCOME TO</div>
+                    <div data-i18n="hero_line2">MY PORTFOLIO ✿</div>
                 </div>
             </div>
 
-            <img src="images/avatar.jpg" alt="My avatar" class="circle-image">
+            <img src="images/avatar.jpg" alt="My avatar" class="circle-image" />
         </div>
     </header>
 
     <div class="footer-container">
-        <p class="footer-text">©2025, All rights reserved</p>
+        <p class="footer-text" data-i18n="footer_text">©2025, All rights reserved</p>
+
+
+        <div class="lang-toggle">
+            <button id="langToggleBtn" onclick="toggleLanguage()">FR</button>
+        </div>
     </div>
+
+
+    <!--LANGUAGE TOGGLE-->
+    <script>
+        let currentLang = 'en';
+
+        const translations = {
+            en: {
+                title: "Leen Al Harash",
+                nav_home: "HOME",
+                nav_about: "ABOUT ME",
+                nav_skills: "SKILLS",
+                nav_projects: "PROJECTS",
+                nav_contact: "CONTACT",
+                hero_line1: "HELLO AND WELCOME TO",
+                hero_line2: "MY PORTFOLIO  ✿",
+                footer_text: "©2025, All rights reserved"
+            },
+            fr: {
+                title: "Leen Al Harash",
+                nav_home: "ACCUEIL",
+                nav_about: "À PROPOS",
+                nav_skills: "COMPÉTENCES",
+                nav_projects: "PROJETS",
+                nav_contact: "CONTACT",
+                hero_line1: "BONJOUR ET BIENVENUE SUR",
+                hero_line2: "MON PORTFOLIO  ✿",
+                footer_text: "©2025, Tous droits réservés"
+            }
+        };
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLang', lang);   // save choice
+
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            if (translations[lang].title) {
+                document.title = translations[lang].title;
+            }
+
+            const toggleBtn = document.getElementById("langToggleBtn");
+            if (toggleBtn) {
+                toggleBtn.innerText = (lang === 'en' ? 'FR' : 'EN');
+            }
+        }
+
+        function toggleLanguage() {
+            const newLang = currentLang === 'en' ? 'fr' : 'en';
+            setLanguage(newLang);
+        }
+
+        window.onload = () => {
+            const saved = localStorage.getItem('preferredLang');
+            if (saved) {
+                currentLang = saved;
+            }
+            setLanguage(currentLang);
+        };
+    </script>
 </body>
 </html>

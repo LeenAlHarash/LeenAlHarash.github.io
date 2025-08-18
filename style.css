@@ -272,11 +272,6 @@ header nav a:hover {
 
 
 /*** FOOTER AREA ***/
-.footer-container {
-  text-align: center;
-  padding: 30px 20px;
-}
-
 .footer-icons {
   margin-bottom: 15px;
 }
@@ -298,6 +293,25 @@ header nav a:hover {
   color: #1e3a8a;
   font-size: 14px;
   margin: 5px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* space between text and button */
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.lang-toggle button {
+  background: none;
+  border: 1px solid #f5dbdb;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 6px;
 }
 
 
