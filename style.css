@@ -84,22 +84,33 @@ header nav a:hover {
 }
 
 /* Mobile styles */
+/* Hide toggle button on desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(175, 104, 104);
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   header nav {
-    position: relative;
     flex-direction: column;
     align-items: flex-end;
   }
 
+  /* Show menu button */
   .menu-toggle {
     display: block;
-    /* show button on mobile */
     margin-bottom: 10px;
   }
 
+  /* Hide desktop nav lists */
   header nav ul {
     display: none;
-    /* hide lists by default */
+    /* hide all lists by default */
     flex-direction: column;
     gap: 10px;
     width: 180px;
@@ -107,6 +118,10 @@ header nav a:hover {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50px;
+    /* just below the menu button */
+    right: 0;
   }
 
   header nav ul.show {
