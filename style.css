@@ -73,89 +73,6 @@ header nav a:hover {
   color: #e63946;
 }
 
-
-
-/* Hide hamburger button on desktop */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  background: none;
-  border: none;
-  color: rgb(175, 104, 104);
-}
-
-/* Flex layout for desktop */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  right: 30px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-nav a {
-  text-decoration: none;
-  color: rgb(175, 104, 104);
-  font-weight: bold;
-}
-
-nav a:hover {
-  color: #e63946;
-}
-
-/* ✅ Mobile styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 30px;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  /* Stack left + right together when open */
-  .nav-left, .nav-right {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hero-content {
   display: flex;
   align-items: center;
@@ -470,4 +387,27 @@ nav a:hover {
 
 .alert-box.show {
   opacity: 1;
+}
+
+/* Contact Mobile */
+@media (max-width: 600px) {
+  #contactForm {
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
 }
