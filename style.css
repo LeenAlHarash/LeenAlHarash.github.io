@@ -139,7 +139,7 @@ header nav a:hover {
 /* Skills section */
 .skills-section {
   text-align: center;
-  padding: 50px;
+  padding: 50px 20px; /* reduce horizontal padding on mobile */
   background-color: #f5f5f5;
 }
 
@@ -184,27 +184,14 @@ header nav a:hover {
   margin: 20px auto;
 }
 
-
+/* Skill grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* 6 columns */
   gap: 20px;
   justify-content: center;
   margin: 50px auto;
   max-width: 1000px;
-}
-
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .skill {
@@ -250,6 +237,75 @@ header nav a:hover {
 .skill:hover .percent {
   opacity: 1;
 }
+
+
+/* Medium screens */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 90%;
+  }
+
+  .skill {
+    width: 80px;
+    height: 70px;
+  }
+
+  .skills-buttons button {
+    padding: 8px 15px;
+    font-size: 0.95rem;
+  }
+
+  .progress-container {
+    width: 70%;
+    height: 20px;
+  }
+
+  .progress-bar {
+    height: 20px;
+    line-height: 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    max-width: 95%;
+  }
+
+  .skill {
+    width: 70px;
+    height: 60px;
+  }
+
+  .skills-buttons button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    margin: 6px;
+  }
+
+  .progress-container {
+    width: 90%;
+    height: 18px;
+  }
+
+  .progress-bar {
+    height: 18px;
+    line-height: 18px;
+    font-size: 0.8rem;
+  }
+
+  .skill-display {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+}
+
+
 
 
 /*** ABOUT ME ***/
