@@ -239,3 +239,64 @@ header nav a:hover {
   cursor: pointer;
   border-radius: 6px;
 }
+
+/* Responsive Projects Section */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .projects-container-inner {
+    flex-direction: column;
+    transform: none !important;
+  }
+
+  .project-container {
+    min-width: 100%;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .project-image-wrapper {
+    max-height: 250px;
+  }
+
+  .project-image {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .project-title {
+    font-size: 1.4em;
+  }
+
+  .project-description {
+    font-size: 0.9em;
+    max-width: 100%;
+  }
+
+  /* Hide arrows on mobile */
+  .carousel-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header nav ul {
+    gap: 10px;
+  }
+
+  .project-title {
+    font-size: 1.2em;
+  }
+
+  .project-tags span {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+}
