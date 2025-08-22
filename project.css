@@ -256,7 +256,7 @@ header nav a:hover {
   flex-direction: column;
   gap: 20px;
   width: 100%;
-  transform: none !important; /* kill carousel slide on mobile */
+  transform: none;
 }
 
 .project-container {
