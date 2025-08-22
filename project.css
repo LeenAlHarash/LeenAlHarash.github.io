@@ -240,20 +240,24 @@ header nav a:hover {
   border-radius: 6px;
 }
 
+
 /* Responsive Projects Section */
 @media (max-width: 768px) {
   .projects-container {
-    flex-direction: column;
-    max-width: 100%;
+    flex-direction: column !important;
+    max-width: 100% !important;
+    overflow: visible !important;
   }
 
   .projects-container-inner {
-    flex-direction: column;
+    flex-direction: column !important;
     transform: none !important;
+    width: 100% !important;
   }
 
   .project-container {
-    min-width: 100%;
+    width: 100% !important;
+    min-width: auto !important;
     margin-bottom: 20px;
     padding: 20px;
   }
@@ -263,7 +267,7 @@ header nav a:hover {
   }
 
   .project-image {
-    max-width: 90%;
+    max-width: 95%;
     height: auto;
   }
 
@@ -272,13 +276,13 @@ header nav a:hover {
   }
 
   .project-description {
-    font-size: 0.9em;
+    font-size: 0.95em;
     max-width: 100%;
   }
 
   /* Hide arrows on mobile */
   .carousel-nav {
-    display: none;
+    display: none !important;
   }
 }
 
