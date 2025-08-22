@@ -507,4 +507,13 @@ header nav a:hover {
     padding: 10px;
     font-size: 0.95rem;
   }
+
+  header nav ul.show {
+    display: flex;
+    /* show when toggled */
+  }
+
+  header nav ul li {
+    text-align: left;
+  }
 }
