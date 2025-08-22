@@ -86,41 +86,42 @@ header nav a:hover {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-    header nav {
-        flex-direction: column;
-        align-items: flex-end;
-        position: relative;
-    }
+  header nav {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 
-    /* Show menu button */
-    .menu-toggle {
-        display: block;
-        margin-bottom: 10px;
-    }
+  /* Show menu button */
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
 
-    /* Hide nav lists by default on mobile */
-    header nav ul {
-        display: none; /* hide initially */
-        flex-direction: column;
-        gap: 10px;
-        width: 200px;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        position: absolute;
-        top: 50px;
-        right: 0;
-    }
+  /* Hide desktop nav lists */
+  header nav ul {
+    display: none;
+    /* hide all lists by default */
+    flex-direction: column;
+    gap: 10px;
+    width: 180px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50px;
+    /* just below the menu button */
+    right: 0;
+  }
 
-    /* Show nav when toggled */
-    header nav ul.show {
-        display: flex;
-    }
+  header nav ul.show {
+    display: flex;
+    /* show when toggled */
+  }
 
-    header nav ul li {
-        text-align: left;
-    }
+  header nav ul li {
+    text-align: left;
+  }
 }
 
 .hero-content {
@@ -505,14 +506,5 @@ header nav a:hover {
   .submit-btn {
     padding: 10px;
     font-size: 0.95rem;
-  }
-
-  header nav ul.show {
-    display: flex;
-    /* show when toggled */
-  }
-
-  header nav ul li {
-    text-align: left;
   }
 }
