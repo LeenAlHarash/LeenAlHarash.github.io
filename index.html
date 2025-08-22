@@ -11,9 +11,12 @@
 
 <script>
   function toggleMenu() {
-    document.querySelector("nav ul").classList.toggle("active");
+    document.querySelectorAll("nav ul").forEach(ul => {
+      ul.classList.toggle("active");
+    });
   }
 </script>
+
 
 <body>
     <header class="hero-header">

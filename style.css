@@ -75,7 +75,7 @@ header nav a:hover {
 
 
 
-/* Hide hamburger by default (desktop only) */
+/* Hide hamburger button on desktop */
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -85,20 +85,45 @@ header nav a:hover {
   color: rgb(175, 104, 104);
 }
 
-/* Mobile styles */
+/* Flex layout for desktop */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  right: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(175, 104, 104);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e63946;
+}
+
+/* ✅ Mobile styles */
 @media (max-width: 768px) {
-  /* Stack header items */
-  header nav {
-    flex-direction: row;
-    justify-content: space-between;
+  .menu-toggle {
+    display: block;
   }
 
-  /* Hide nav links initially */
-  header nav ul {
+  nav ul {
     display: none;
     flex-direction: column;
-    gap: 15px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     position: absolute;
     top: 60px;
     right: 30px;
@@ -107,14 +132,14 @@ header nav a:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  /* Show nav links when "active" */
-  header nav ul.active {
+  nav ul.active {
     display: flex;
   }
 
-  /* Show hamburger button */
-  .menu-toggle {
-    display: block;
+  /* Stack left + right together when open */
+  .nav-left, .nav-right {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
