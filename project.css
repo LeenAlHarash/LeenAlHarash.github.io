@@ -74,6 +74,17 @@ header nav a:hover {
 }
 
 /* Mobile styles */
+/* Hide toggle button on desktop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: rgb(175, 104, 104);
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
