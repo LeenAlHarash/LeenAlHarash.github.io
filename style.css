@@ -239,42 +239,17 @@ header nav a:hover {
 }
 
 
-/* Medium screens */
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    max-width: 90%;
-  }
-
-  .skill {
-    width: 80px;
-    height: 70px;
-  }
-
-  .skills-buttons button {
-    padding: 8px 15px;
-    font-size: 0.95rem;
-  }
-
-  .progress-container {
-    width: 70%;
-    height: 20px;
-  }
-
-  .progress-bar {
-    height: 20px;
-    line-height: 20px;
-    font-size: 0.9rem;
-  }
-}
-
-/* Small screens */
+/* Skills section mobile*/
 @media (max-width: 480px) {
+  .skills-section {
+    padding: 60px 15px 80px 15px; 
+  }
+
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    max-width: 95%;
+    gap: 15px;
+    max-width: 100%;
+    margin-top: 30px;
   }
 
   .skill {
@@ -288,20 +263,10 @@ header nav a:hover {
     margin: 6px;
   }
 
-  .progress-container {
-    width: 90%;
-    height: 18px;
-  }
-
-  .progress-bar {
-    height: 18px;
-    line-height: 18px;
-    font-size: 0.8rem;
-  }
-
   .skill-display {
     font-size: 1rem;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
