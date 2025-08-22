@@ -74,6 +74,63 @@ header nav a:hover {
 }
 
 
+
+/* Hide hamburger by default (desktop only) */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: rgb(175, 104, 104);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Stack header items */
+  header nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* Hide nav links initially */
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  /* Show nav links when "active" */
+  header nav ul.active {
+    display: flex;
+  }
+
+  /* Show hamburger button */
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .hero-content {
   display: flex;
   align-items: center;
