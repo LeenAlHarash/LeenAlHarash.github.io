@@ -2,121 +2,236 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Leen Al Harash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="title"> Personal Portfolio <3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<script>
-    function toggleMenu() {
-        document.querySelectorAll('header nav ul').forEach(ul => {
-            ul.classList.toggle('show');
-        });
-    }
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
 
 <body>
-    <header class="hero-header">
-        <nav>
-            <!--Mobile header-->
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-
-            <ul class="nav-left">
-                <li><a href="index.html" data-i18n="nav_home">HOME</a></li>
-            </ul>
-            <ul class="nav-right">
-                <li><a href="about.html" data-i18n="nav_about">ABOUT ME</a></li>
-                <li><a href="skills.html" data-i18n="nav_skills">SKILLS</a></li>
-                <li><a href="projects.html" data-i18n="nav_projects">PROJECTS</a></li>
-                <li><a href="contact.html" data-i18n="nav_contact">CONTACT</a></li>
-            </ul>
-        </nav>
-
-        <div class="hero-content">
-            <div class="hero-name">
-                <div class="name-lines">
-                    <div data-i18n="hero_line1">HELLO AND WELCOME TO</div>
-                    <div data-i18n="hero_line2">MY PORTFOLIO ✿</div>
-                </div>
-            </div>
-
-            <img src="avatar.jpg" alt="My avatar" class="circle-image" />
-        </div>
-    </header>
-
-    <div class="footer-container">
-        <p class="footer-text" data-i18n="footer_text">©2025, All rights reserved</p>
-
-        <div class="lang-toggle">
-            <button id="langToggleBtn" onclick="toggleLanguage()">FR</button>
-        </div>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <button class="chip" id="langToggleBtn" onclick="toggleLanguage()">🌐FR</button>
+      
+      <!-- Nav Bar -->
+      <nav aria-label="Primary" style="font-size: 18px;">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#projects" data-i18n="nav_projects">Projects</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
     </div>
+  </header>
+
+
+  <main class="container">
+    <!-- Intro - Hero -->
+    <section class="hero" aria-label="Intro">
+      <div>
+        <strong>
+          <p style="font-size: 40px;" data-i18n="hero_line">WELCOME TO MY PORTFOLIO ✿</p>
+        </strong>
     
+        <div class="Typewriter" data-testid="typewriter-wrapper">
+          <span class="Typewriter__wrapper" id="typewriter-text"
+            data-i18n-typewriter="typewriter1,typewriter2,typewriter3"></span>
+          <span class="Typewriter__cursor">|</span>
+        </div>
+    
+        <div class="cta">
+          <div class="dropdown-container">
+            <button class="btn btn-primary" data-i18n="downCV"> Download CV 📥 </button>
+            <div class="dropdown-menu">
+              <a href="CV/LeenAlHarash - EN CV.pdf" download="LeenAlHarash-EN.pdf" class="dropdown-link"> EN </a>
+              <a href="CV/LeenAlHarash - FR CV.pdf" download="LeenAlHarash-FR.pdf" class="dropdown-link"> FR </a>
+            </div>
+          </div>
+    
+          <a class="btn btn-outline" href="#contact" data-i18n="getInTouchBox">Get in touch 🤝</a>
+        </div>
+      </div>
 
-    <!--LANGUAGE TOGGLE-->
-    <script>
-        let currentLang = 'en';
+        <div aria-hidden="true">
+          <div class="card">
+            <img src="avatar.jpg" alt="My avatar" />
+          </div>
+        </div>
+    </section>
 
-        const translations = {
-            en: {
-                title: "Leen Al Harash",
-                nav_home: "HOME",
-                nav_about: "ABOUT ME",
-                nav_skills: "SKILLS",
-                nav_projects: "PROJECTS",
-                nav_contact: "CONTACT",
-                hero_line1: "HELLO AND WELCOME TO",
-                hero_line2: "MY PORTFOLIO  ✿",
-                footer_text: "©2025, All rights reserved"
-            },
-            fr: {
-                title: "Leen Al Harash",
-                nav_home: "ACCUEIL",
-                nav_about: "À PROPOS",
-                nav_skills: "COMPÉTENCES",
-                nav_projects: "PROJETS",
-                nav_contact: "CONTACT",
-                hero_line1: "BONJOUR ET BIENVENUE SUR",
-                hero_line2: "MON PORTFOLIO  ✿",
-                footer_text: "©2025, Tous droits réservés"
-            }
-        };
 
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('preferredLang', lang);   // save choice
+    <!-- About Section-->
+    <section id="about" aria-labelledby="about-title">
+      <h2 class="section-title" data-i18n="about_title">GET TO KNOW ME! 👩‍🎓</h2>
+      <div class="about">
+        <div class="card">
+          <p data-i18n="parag"> Hi! I'm <strong style="color: rgb(167, 34, 167);">Leen Al Harash</strong>, a web and application development student, soon to graduate, with a passion for creating clean programming experiences. I enjoy both front-end creativity and back-end problem-solving. <br><br>
+            Furthermore, I'm experienced in customer service with strong communication & leadership skills , that gives me the opportunity to interact and deal comfortably with various clients.
+          </p>
+        </div>
 
-            document.querySelectorAll("[data-i18n]").forEach(el => {
-                const key = el.getAttribute("data-i18n");
-                if (translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
-                }
-            });
+        <div class="card">
+          <div class="skills-grid chip"></div>
+        </div>
+      </div>
+    </section>
 
-            if (translations[lang].title) {
-                document.title = translations[lang].title;
-            }
 
-            const toggleBtn = document.getElementById("langToggleBtn");
-            if (toggleBtn) {
-                toggleBtn.innerText = (lang === 'en' ? 'FR' : 'EN');
-            }
-        }
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 class="section-title" id="projects-title" data-i18n="title_pro">MY PROJECTS 💼</h2>
 
-        function toggleLanguage() {
-            const newLang = currentLang === 'en' ? 'fr' : 'en';
-            setLanguage(newLang);
-        }
+      <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
 
-        window.onload = () => {
-            const saved = localStorage.getItem('preferredLang');
-            if (saved) {
-                currentLang = saved;
-            }
-            setLanguage(currentLang);
-        };
-    </script>
+        <div class="carousel-track-container">
+          <div class="carousel-track">
+            
+            <article class="project">
+              <div class="thumb">
+                <img src="gifs/GreenPulse.gif" alt="Green Pulse" class="project-image" style="height: 185px;"/>
+              </div>
+              <div class="content">
+                <h3>Green Pulse</h3>
+                <p data-i18n="greenDesc">A transactional website that provides seeds, vegetables, wheats, etc. While also providing real-time
+                  market data.</p>
+              </div>
+              <div class="links">
+                <p>html, css, js, angular, springboot, bootstrap</p>
+              </div>
+            </article>
+            
+            <article class="project">
+              <div class="thumb">
+                <img src="gifs/2D cowboy.gif" alt="2D Cowboy Hero" class="project-image" />
+              </div>
+              <div class="content">
+                <h3>Cowboy Hero 2D <a href="https://hmariyam.itch.io/cowboy-hero" target="_blank"
+                    style="text-decoration:none; float:right; color:blue; font-size: small;">web</a></h3>
+                <p data-i18n="cowboyDesc">A desertic 2D video game filled with obstacles to prevent the cowboy from finding his lost item. This
+                  game also has a continuous in 3D and another part combined.</p>
+              </div>
+              <div class="links">
+                <p class="link">unity , c#</p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">
+                <img src="gifs/snake gif.gif" alt="Snake Game" class="project-image" />
+              </div>
+              <div class="content">
+                <h3>Snake</h3>
+                <p data-i18n="snakeDesc">An online game where the player guides a growing snake to eat the apple. The goal is to make the
+                  snake as large as possible before it collides with itself</p>
+              </div>
+              <div class="links">
+                <p class="link">html, css, js</p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">
+                <img src="gifs/tictactoe.gif" alt="Tic Tac Toe" class="project-image" />
+              </div>
+              <div class="content">
+                <h3>Tic Tac Toe</h3>
+                <p data-i18n="tictacDesc">The classical game where you play against a robot that blocks moves strategically. The app supports
+                  English, French, and Spanish.</p>
+              </div>
+              <div class="links">
+                <p class="link">kotlin</p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">
+                <img src="gifs/Portfolio.gif" alt="Portfolio" class="project-image" style="height: 180px;" />
+              </div>
+              <div class="content">
+                <h3>Portfolio</h3>
+                <p data-i18n="portfolioDesc">A bilingual personal portfolio website that features a responsive layout and smooth
+                  animations, serving as a central hub for my work and career highlights.</p>
+              </div>
+              <div class="links">
+                <p class="link">html, css, js</p>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="thumb">
+                <img src="gifs/MusicLibrary.gif" alt="Music Library App" class="project-image" />
+              </div>
+              <div class="content">
+                <h3>Music Library</h3>
+                <p data-i18n="musicDesc">An Android music app supporting English and French, that allows you to add, delete, edit and search
+                  up songs.</p>
+              </div>
+              <div class="links">
+                <p class="link">kotlin</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="carousel-btn next">&#10095;</button>
+      </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title" data-i18n="contact_title">GET IN TOUCH 📍</h2>
+    
+      <form id="contactForm" class="contact">
+        <p data-i18n="contact_intro" class="contact-line" data-i18n="contact_intro">
+          Got a job opportunity or a project in mind? I’d love to hear from you.
+    
+          <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/LeenAlHarash"><i class="fab fa-github"></i></a>
+          <a href="https://discordid.netlify.app/?id=1077390981688729702"><i class="fab fa-discord"></i></a>
+        </p>
+    
+        <div class="form-group">
+          <label for="user_name" data-i18n="contact_name_label">Name :</label>
+          <input type="text" id="user_name" name="name" placeholder="Your name.." />
+        </div>
+    
+        <div class="form-group">
+          <label for="user_email" data-i18n="contact_email_label">Email :</label>
+          <input type="email" id="user_email" name="from_email" placeholder="your@example.com" />
+        </div>
+    
+        <div class="form-group">
+          <label for="message" data-i18n="contact_message_label">Message :</label>
+          <textarea id="message" name="message" placeholder="Tell me your idea.."></textarea>
+        </div>
+    
+        <button type="submit" class="submit-btn" data-i18n="contact_submit">Send</button>
+      </form>
+    
+      <div id="alertBox" class="alert-box" data-i18n="contact_alert">Message sent!</div>
+    </section>
+  </main>
+
+
+  <footer>
+    <div class="container" data-i18n="footer_text">
+      © <span id="y">2025</span>, All rights reserved
+    </div>
+  </footer>
+
+
+  <button onclick="scrollToTop()" id="scroll-to-top-btn" title="Go to top"> ⬆ </button>
+
+
+  <script src="script.js"></script>
+  <script src="langScript.js"></script>
+  
 </body>
 </html>
