@@ -17,6 +17,10 @@ const skills = {
     percent: 85,
     svg: `KOTLIN`
   },
+  java: {
+    percent: 85,
+    svg: `JAVA`
+  },
   jfx: {
     percent: 85,
     svg: `JFX`
@@ -49,9 +53,9 @@ const skills = {
     percent: 75,
     svg: `LINUX`
   },
-  laravel: {
+  typeScript: {
     percent: 65,
-    svg: `LARAVEL`
+    svg: `TS`
   },
   springB: {
     percent: 85,
