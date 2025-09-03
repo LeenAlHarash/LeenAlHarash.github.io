@@ -33,7 +33,10 @@ const translations = {
 
         //Contact Part
         contact_title: "GET IN TOUCH! 📍",
-        contact_intro: "Got a job opportunity or a project in mind? I’d love to hear from you.",
+        contact_intro: `Got a job opportunity or a project in mind? I’d love to hear from you.
+                        <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/LeenAlHarash"><i class="fab fa-github"></i></a>
+                        <a href="https://discordid.netlify.app/?id=1077390981688729702"><i class="fab fa-discord"></i></a>`,
         contact_name_label: "Name :",
         contact_email_label: "Email :",
         contact_message_label: "Message :",
@@ -71,7 +74,10 @@ const translations = {
 
         //Contact Part
         contact_title: "ÉCRIVEZ-MOI! 📍",
-        contact_intro: "Vous avez une opportunité ou un projet en tête ? J’adorerais en entendre parler.",
+        contact_intro: `Vous avez une opportunité ou un projet en tête ? J’adorerais en entendre parler.
+                        <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/LeenAlHarash"><i class="fab fa-github"></i></a>
+                        <a href="https://discordid.netlify.app/?id=1077390981688729702"><i class="fab fa-discord"></i></a>`,
         contact_name_label: "Nom :",
         contact_email_label: "E-mail :",
         contact_message_label: "Message :",
