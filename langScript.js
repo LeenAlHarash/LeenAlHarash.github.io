@@ -29,8 +29,9 @@ const translations = {
         musicDesc: "An Android music app supporting English and French, that allows you to add, delete, edit and search up songs.",
         tictacDesc: "The classical game where you play against a robot that blocks moves strategically. The app supports English, French, and Spanish.",
         portfolioDesc: "A bilingual personal website that features a responsive layout and smooth animations, serving as a central hub for my work and career highlights.",
+        shatterClick: "A fun and interactive Pygame game where a bouncing “CLICK ME!” text floats across the screen. Clicking anywhere triggers a glass-breaking sound for extra effect and colorful shatter effects with animated cracks and background color changes.",
 
-
+        
         //Contact Part
         contact_title: "GET IN TOUCH! 📍",
         contact_intro: `Got a job opportunity or a project in mind? I’d love to hear from you.
@@ -71,6 +72,8 @@ const translations = {
         musicDesc: "Une application musicale Android prenant en charge l'anglais et le français, qui vous permet d'ajouter, de supprimer, de modifier et de rechercher des chansons.",
         tictacDesc: "Un jeu classique où vous affrontez un robot qui bloque les déplacements de manière stratégique. L'application est disponible en anglais, français et espagnol.",
         portfolioDesc: "Un site Web personnel bilingue doté d'une mise en page réactive et d'animations fluides, servant de plaque tournante centrale pour mon travail et les points forts de ma carrière.",
+        shatterClick: "Un jeu Pygame amusant et interactif où un texte «CLICK ME!» rebondit sur l'écran. Cliquer déclenche un bruit de verre brisé pour un effet supplémentaire et des effets de bris colorés avec des fissures animées et des changements de couleur d'arrière-plan.",
+
 
         //Contact Part
         contact_title: "ÉCRIVEZ-MOI! 📍",
