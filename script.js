@@ -1,86 +1,93 @@
 // SKILL % FUNCTIONS
+const skillCategories = {
+  frontend: {
+    label: "Frontend",
+    skills: {
+      html: { percent: 90, svg: "HTML" },
+      css: { percent: 80, svg: "CSS" },
+      js: { percent: 75, svg: "JS" },
+      typeScript: { percent: 65, svg: "TS" },
+      angular: { percent: 65, svg: "ANGULAR" },
+    }
+  },
 
-const skills = {
-  html: {
-    percent: 90,
-    svg: `HTML`
+  backend: {
+    label: "Backend",
+    skills: {
+      java: { percent: 85, svg: "JAVA" },
+      springB: { percent: 85, svg: "SPRINGBOOT" },
+      php: { percent: 40, svg: "PHP" },
+      aspNetCore: { percent: 70, svg: "ASP.NET Core" },
+      sql: { percent: 75, svg: "SQL" },
+      apiInt: { percent: 80, svg: "API INTEGRATION" },
+    }
   },
-  css: {
-    percent: 80,
-    svg: `CSS`
+
+  mobile_desktop: {
+    label: "Mobile & Desktop",
+    skills: {
+      kotlin: { percent: 85, svg: "KOTLIN" },
+      jfx: { percent: 85, svg: "JFX" },
+      unity: { percent: 90, svg: "UNITY" },
+    }
   },
-  js: {
-    percent: 70,
-    svg: `JS`
+
+  devops_tools: {
+    label: "DevOps & Tools",
+    skills: {
+      git: { percent: 75, svg: "GIT" },
+      docker: { percent: 75, svg: "DOCKER" },
+      ciCD: { percent: 80, svg: "CI/CD PIPELINE" },
+      linux: { percent: 75, svg: "LINUX" },
+    }
   },
-  kotlin: {
-    percent: 85,
-    svg: `KOTLIN`
-  },
-  java: {
-    percent: 85,
-    svg: `JAVA`
-  },
-  jfx: {
-    percent: 85,
-    svg: `JFX`
-  },
-  php: {
-    percent: 40,
-    svg: `PHP`
-  },
-  cS: {
-    percent: 45,
-    svg: `C#`
-  },
-  python: {
-    percent: 55,
-    svg: `PYTHON`
-  },
-  git: {
-    percent: 80,
-    svg: `GIT`
-  },
-  oop: {
-    percent: 75,
-    svg: `OOP`
-  },
-  sql: {
-    percent: 75,
-    svg: `SQL`
-  },
-  linux: {
-    percent: 75,
-    svg: `LINUX`
-  },
-  typeScript: {
-    percent: 65,
-    svg: `TS`
-  },
-  springB: {
-    percent: 85,
-    svg: `SPRINGBOOT`
-  },
-  angular: {
-    percent: 65,
-    svg: `ANGULAR`
-  },
+
+  concepts: {
+    label: "Concepts",
+    skills: {
+      oop: { percent: 75, svg: "OOP" },
+      iot: { percent: 90, svg: "IoT" },
+    }
+  }
 };
 
-const container = document.querySelector(".skills-grid");
+const skillsContainer = document.querySelector(".card .skills-grid");
+const categoryButtons = document.querySelectorAll(".skill-categories button");
 
-for (let key in skills) {
-  const { percent, svg } = skills[key];
+function renderSkills(categoryKey) {
+  const category = skillCategories[categoryKey];
+  if (!category) return;
 
-  const skillDiv = document.createElement("div");
-  skillDiv.className = "skill";
-  skillDiv.innerHTML = `
-      <div class="icon">${svg}</div>
-      <div class="percent">${percent}%</div>
+  skillsContainer.innerHTML = "";
+
+  Object.values(category.skills).forEach(skill => {
+    const skillEl = document.createElement("div");
+    skillEl.className = "skill-card";
+
+    skillEl.innerHTML = `
+      <div class="skill-svg">${skill.svg}</div>
+      <div class="skill-hover">
+        <span>${skill.percent}%</span>
+      </div>
     `;
 
-  container.appendChild(skillDiv);
+    skillsContainer.appendChild(skillEl);
+  });
 }
+
+// Button click handling
+const card = document.querySelector(".skills-grid").closest(".card");
+
+categoryButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    card.classList.remove("skills-collapsed");
+    categoryButtons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    renderSkills(btn.dataset.category);
+  });
+});
 
 
 
