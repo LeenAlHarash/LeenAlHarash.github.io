@@ -9,7 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
 
@@ -69,8 +71,9 @@
       <h2 class="section-title" data-i18n="about_title">GET TO KNOW ME! 👩‍🎓</h2>
       <div class="about">
         <div class="card">
-          <p data-i18n="parag"> Hi! I'm <strong style="color: rgb(167, 34, 167);">Leen Al Harash</strong>, a web and application development student, soon to graduate, with a passion for creating clean programming experiences. I enjoy both front-end creativity and back-end problem-solving. <br><br>
-            Furthermore, I'm experienced in customer service with strong communication & leadership skills , that gives me the opportunity to interact and deal comfortably with various clients.
+          <p data-i18n="parag"> Hi! I'm <strong style="color: rgb(167, 34, 167);">Leen Al Harash</strong>, a web and application development student soon to graduate, with a passion for creating clean, user-friendly programming experiences. 
+            I have a strong interest in both front-end and back-end technologies and enjoy building well-structured, efficient applications. Alongside my technical background, I have experience in customer service, where I developed strong 
+            communication and leadership skills. This allows me to interact confidently with diverse clients and work effectively in team environments. I’m always open to sharing insights, learning from others, and exploring new opportunities to grow professionally.
           </p>
         </div>
 
@@ -94,15 +97,38 @@
       <h2 class="section-title" id="projects-title" data-i18n="title_pro">MY PROJECTS 💼</h2>
 
       <div class="carousel">
-        <button class="carousel-btn prev">&#10094;</button>
+        <div class="swiper projects-swiper">
+            <div class="swiper-wrapper">
 
-        <div class="carousel-track-container">
-          <div class="carousel-track">
-
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/Shatter Click.gif" alt="Shatter Click" class="project-image" />
+            <article class="project swiper-slide">
+              <img src="gifs/Afterglam.gif" alt="Afterglam" class="project-image" />
+              <div class="content">
+                <h3>Afterglam</h3>
+                <p data-i18n="afterglam"> A secure backend API built to manage users, cosmetic products, and housing data. 
+                  The platform includes authenticated access, admin-only features, and advanced search and filtering, 
+                  all documented through an interactive API interface.
+                  </p>
               </div>
+              <div class="links">
+                <p class="link">python, sql, swagger</p>
+              </div>
+            </article>
+
+            <article class="project swiper-slide">
+              <img src="gifs/Kaypic.gif.gif" alt="Kaypic" class="project-image" style="height: 180px;"/>
+              <div class="content">
+                <h3>Kaypic</h3>
+                <p data-i18n="kaypic"> A web platform designed for sports and community organizations, featuring secure user authentication, role-based access, and real-time interactions. 
+                  The application supports file sharing and live updates to enhance collaboration between members.
+                </p>
+              </div>
+              <div class="links">
+                <p class="link">asp.net, c#, js, razor, signalR, asp.net core identity, swagger</p>
+              </div>
+            </article>
+
+            <article class="project swiper-slide">
+              <img src="gifs/Shatter Click.gif" alt="Shatter Click" class="project-image" />
               <div class="content">
                 <h3>Shatter Click</h3>
                 <p data-i18n="shatterClick">A fun and interactive Pygame game where a bouncing “CLICK ME!” text floats across the screen. Clicking anywhere triggers a glass-breaking 
@@ -112,25 +138,35 @@
                 <p class="link">python</p>
               </div>
             </article>
-            
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/GreenPulse.gif" alt="Green Pulse" class="project-image" style="height: 185px;"/>
-              </div>
+
+            <article class="project swiper-slide">
+              <article style="display: flex; justify-content: center; align-items: center;">
+                <img src="gifs/HotelRes.gif" alt="Hotel Res" style="width: 230px; height: 280px;" />
+              </article>
               <div class="content">
-                <h3>Green Pulse</h3>
-                <p data-i18n="greenDesc">A transactional website that provides seeds, vegetables, wheats, etc. While also providing real-time
-                  market data.</p>
+                <h3>Hotel Res</h3>
+                <p data-i18n="hotelRes"> An Android application for browsing and managing hotel reservations. The app connects to a remote API to fetch live data, 
+                  handles loading and error states, and follows a clean structure to ensure a smooth and reliable user experience.
+                </p>
               </div>
               <div class="links">
-                <p>html, css, js, angular, springboot, bootstrap</p>
+                <p class="link">kotlin, json, android SDK, http/rest APIs</p>
               </div>
             </article>
             
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/2D cowboy.gif" alt="2D Cowboy Hero" class="project-image" />
+            <article class="project swiper-slide">
+              <img src="gifs/GreenPulse.gif" alt="Green Pulse" class="project-image" style="height: 185px;"/>
+              <div class="content">
+                <h3>Green Pulse</h3>
+                <p data-i18n="greenDesc">A transactional website that provides seeds, vegetables, wheats, etc. While also providing real-time market data.</p>
               </div>
+              <div class="links">
+                <p>html, css, js, angular, springboot, bootstrap, email APIs, typescript, rest APIs</p>
+              </div>
+            </article>
+            
+            <article class="project swiper-slide">
+              <img src="gifs/2D cowboy.gif" alt="2D Cowboy Hero" class="project-image" />
               <div class="content">
                 <h3>Cowboy Hero 2D <a href="https://hmariyam.itch.io/cowboy-hero" target="_blank"
                     style="text-decoration:none; float:right; color:blue; font-size: small;">web</a></h3>
@@ -142,10 +178,8 @@
               </div>
             </article>
 
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/snake gif.gif" alt="Snake Game" class="project-image" />
-              </div>
+            <article class="project swiper-slide">
+              <img src="gifs/snake gif.gif" alt="Snake Game" class="project-image" />
               <div class="content">
                 <h3>Snake</h3>
                 <p data-i18n="snakeDesc">An online game where the player guides a growing snake to eat the apple. The goal is to make the
@@ -156,10 +190,8 @@
               </div>
             </article>
 
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/tictactoe.gif" alt="Tic Tac Toe" class="project-image" />
-              </div>
+            <article class="project swiper-slide">
+              <img src="gifs/tictactoe.gif" alt="Tic Tac Toe" class="project-image" />
               <div class="content">
                 <h3>Tic Tac Toe</h3>
                 <p data-i18n="tictacDesc">The classical game where you play against a robot that blocks moves strategically. The app supports
@@ -170,10 +202,8 @@
               </div>
             </article>
 
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/Portfolio.gif" alt="Portfolio" class="project-image" style="height: 180px;" />
-              </div>
+            <article class="project swiper-slide">
+              <img src="gifs/Portfolio.gif" alt="Portfolio" class="project-image" style="height: 180px;" />
               <div class="content">
                 <h3>Portfolio</h3>
                 <p data-i18n="portfolioDesc">A bilingual personal portfolio website that features a responsive layout and smooth
@@ -184,10 +214,10 @@
               </div>
             </article>
 
-            <article class="project">
-              <div class="thumb">
-                <img src="gifs/MusicLibrary.gif" alt="Music Library App" class="project-image" />
-              </div>
+            <article class="project swiper-slide">
+              <article style="display: flex; justify-content: center; align-items: center;">
+                <img src="gifs/MusicLibrary.gif" alt="Music Library App" class="project-image" style="height: 300px;"/>
+              </article>
               <div class="content">
                 <h3>Music Library</h3>
                 <p data-i18n="musicDesc">An Android music app supporting English and French, that allows you to add, delete, edit and search
@@ -197,11 +227,12 @@
                 <p class="link">kotlin</p>
               </div>
             </article>
-
+            
           </div>
-        </div>
 
-        <button class="carousel-btn next">&#10095;</button>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
     </section>
 
@@ -252,8 +283,8 @@
   <button onclick="scrollToTop()" id="scroll-to-top-btn" title="Go to top"> ⬆ </button>
 
 
-  <script src="script.js"></script>
-  <script src="langScript.js"></script>
+  <script src="JS/script.js"></script>
+  <script src="JS/langScript.js"></script>
   
 </body>
 </html>
