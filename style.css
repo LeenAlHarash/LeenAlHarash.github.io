@@ -562,30 +562,23 @@ footer {
   }
 
 
-  /* PROJECTS */
-  .projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-
-  .project {
-    flex: unset;
-    min-width: auto;
-    margin: 0 auto;
-  }
-
-
   /* NAVIGATION */
   .nav {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
   .nav a {
     margin-left: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+
+  #langToggleBtn {
+    margin-right: 10px;
   }
 
 
