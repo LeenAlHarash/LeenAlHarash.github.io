@@ -185,7 +185,6 @@ header {
 }
 
 @keyframes blink-caret {
-
   from,
   to {
     border-color: transparent;
@@ -390,8 +389,8 @@ section {
 
 .project {
   flex: 0 0 calc(30% - 4.2rem);
+  min-width: 300px;
   margin: 0.85rem;
-  height: 300px;
   background: white;
   border-radius: 8px;
   padding: 1rem;
@@ -400,15 +399,8 @@ section {
 
 .project-image {
   max-width: 100%;
-  height: auto;
   border-radius: 10px;
 }
-
-.project {
-  min-width: 300px;
-  margin-right: 20px;
-}
-
 
 
 /*** CONTACT AREA ***/
@@ -596,7 +588,18 @@ footer {
   }
 
 
-  /* CONTACT FORM */
+  /* PROJECTS */
+  .carousel {
+    overflow: hidden; /* hard stop overflow */
+  }
+
+  .project {
+    min-width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+
+  /* CONTACT */
   #contactForm {
     width: 100%;
     padding: 20px;
