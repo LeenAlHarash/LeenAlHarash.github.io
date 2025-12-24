@@ -532,3 +532,92 @@ footer {
 #scroll-to-top-btn:hover {
   opacity: 5;
 }
+
+
+
+/*Mobile CSS*/
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+
+
+  /* HERO SECTION */
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0 20px;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  /* ABOUT SECTION */
+  .about {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+
+  /* PROJECTS */
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .project {
+    flex: unset;
+    min-width: auto;
+    margin: 0 auto;
+  }
+
+
+  /* NAVIGATION */
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+
+  /* SECTIONS */
+  .section-title {
+    font-size: clamp(20px, 4vw, 28px);
+  }
+
+  .hero p {
+    font-size: clamp(16px, 4vw, 18px);
+  }
+
+  .project h3 {
+    font-size: clamp(16px, 3vw, 20px);
+  }
+
+  .project p {
+    font-size: clamp(12px, 2.5vw, 14px);
+  }
+
+
+  /* CONTACT FORM */
+  #contactForm {
+    padding: 20px;
+  }
+
+  .contact-line {
+    gap: 20px;
+    font-size: 14px;
+  }
+
+  .contact-line a {
+    font-size: 18px;
+  }
+}
