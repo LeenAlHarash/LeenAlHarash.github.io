@@ -586,18 +586,7 @@ footer {
   .project p {
     font-size: clamp(12px, 2.5vw, 14px);
   }
-
-
-  /* PROJECTS */
-  .carousel {
-    overflow: hidden; /* hard stop overflow */
-  }
-
-  .project {
-    min-width: 100% !important;
-    margin: 0 !important;
-    box-sizing: border-box;
-  }
+  
 
   /* CONTACT */
   #contactForm {
