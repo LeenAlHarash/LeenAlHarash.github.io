@@ -11,7 +11,6 @@ API Documentation Demo : [API <3](https://portfolio-api-8kcj.onrender.com/swagge
 - Responsive and modern UI
 - Project carousel powered by Swiper
 - Animated GIF previews for projects
-- Clean and consistent project cards
 - Multilingual support (English / French)
 - Smooth navigation and interactions
 
@@ -44,6 +43,7 @@ The portfolio includes a lightweight **FastAPI backend** used to demonstrate:
 - REST endpoint structure
 - Pydantic schema validation
 - Swagger / OpenAPI documentation
+
 The API is intentionally **static (no database)** and serves as a showcase of backend design rather than data persistence.
 
 ## API built With
