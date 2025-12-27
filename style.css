@@ -108,6 +108,7 @@ header {
 
 /*btn 1 blue*/
 .btn-primary {
+  height: 50px;
   background: linear-gradient(120deg, var(--accent), var(--accent-2));
   color: white;
   box-shadow: var(--shadow);
