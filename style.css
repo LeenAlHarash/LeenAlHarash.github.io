@@ -249,13 +249,6 @@ section {
   z-index: 2;
 }
 
-.skills-collapsed .skill-categories {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .skill-categories button {
   background: transparent;
   border: 2px solid #3b416996;
@@ -286,12 +279,6 @@ section {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
-}
-
-.skills-collapsed .skills-grid {
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
 }
 
 .skill-card {
