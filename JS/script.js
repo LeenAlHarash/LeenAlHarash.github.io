@@ -1,36 +1,38 @@
 // SKILL % FUNCTIONS
 window.addEventListener('DOMContentLoaded', () => {
 
-    const skillCategories = {
+  const skillCategories = {
     frontend: {
       label: "Frontend",
       skills: {
         html: { percent: 90, svg: "HTML" },
         css: { percent: 80, svg: "CSS" },
-        js: { percent: 75, svg: "JS" },
-        typeScript: { percent: 65, svg: "TS" },
         angular: { percent: 65, svg: "ANGULAR" },
+        js: { percent: 75, svg: "JS" },
+        typeScript: { percent: 65, svg: "TS" }
       }
     },
 
     backend: {
       label: "Backend",
       skills: {
-        java: { percent: 85, svg: "JAVA" },
         springB: { percent: 85, svg: "SPRINGBOOT" },
-        php: { percent: 40, svg: "PHP" },
         aspNetCore: { percent: 70, svg: "ASP.NET Core" },
-        sql: { percent: 75, svg: "SQL" },
-        apiInt: { percent: 80, svg: "API INTEGRATION" },
+        apiInt: { percent: 80, svg: "API INTEGRATION" },        
+        php: { percent: 40, svg: "PHP" },
       }
     },
 
-    mobile_desktop: {
-      label: "Mobile & Desktop",
+    programming: {
+      label: "Programming",
       skills: {
-        kotlin: { percent: 85, svg: "KOTLIN" },
         jfx: { percent: 85, svg: "JFX" },
-        unity: { percent: 90, svg: "UNITY" },
+        kotlin: { percent: 85, svg: "KOTLIN" },    
+        sql: { percent: 75, svg: "SQL" },
+        python: { percent: 70, svg: "PYTHON" },
+        javaee: { percent: 80, svg: "JAVA-EE" },
+        javase: { percent: 80, svg: "JAVA-SE" },
+        cS: { percent: 45, svg: "C#" },
       }
     },
 
@@ -44,11 +46,12 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     },
 
-    concepts: {
-      label: "Concepts",
+    others: {
+      label: "Others",
       skills: {
         oop: { percent: 75, svg: "OOP" },
         iot: { percent: 90, svg: "IoT" },
+        unity: { percent: 90, svg: "UNITY" }
       }
     }
   };
@@ -78,12 +81,9 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // Button click handling
-  const card = document.querySelector(".skills-grid").closest(".card");
-
   categoryButtons.forEach(btn => {
     btn.addEventListener("click", () => {
 
-      card.classList.remove("skills-collapsed");
       categoryButtons.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 

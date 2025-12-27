@@ -34,6 +34,7 @@ const translations = {
         kaypic: "A web platform designed for sports and community organizations, featuring secure user authentication, role-based access, and real-time interactions. The application supports file sharing and live updates to enhance collaboration between members.",
         hotelRes: "An Android application for browsing and managing hotel reservations. The app connects to a remote API to fetch live data, handles loading and error states, and follows a clean structure to ensure a smooth and reliable user experience.",
         afterglam: "A secure backend API built to manage users, cosmetic products, and housing data. The platform includes authenticated access, admin-only features, and advanced search and filtering, all documented through an interactive API interface.",
+        portfolioAPI: "Simple FastAPI backend created to complement my personal portfolio website. The API demonstrates backend structure, RESTful endpoints, and Swagger (OpenAPI) documentation, without relying on a database.",
 
 
         //Contact Part
@@ -82,6 +83,7 @@ const translations = {
         kaypic: "Une plateforme web destinée aux organisations sportives et communautaires, intégrant une authentification sécurisée, une gestion des rôles et des interactions en temps réel. L’application prend en charge le partage de fichiers et les mises à jour en direct afin de faciliter la collaboration entre les membres.",
         hotelRes: "Une application Android permettant de consulter et de gérer des réservations d’hôtel. L’application se connecte à une API distante pour récupérer des données en temps réel, gère les états de chargement et les erreurs, et repose sur une structure claire assurant une expérience utilisateur fluide et fiable.",
         afterglam: "Une API backend sécurisée conçue pour gérer les utilisateurs, les produits cosmétiques et les données de logement. La plateforme intègre un accès authentifié, des fonctionnalités réservées aux administrateurs ainsi qu’une recherche et un filtrage avancés, le tout documenté via une interface API interactive.",
+        portfolioAPI: "Backend FastAPI simple créé pour compléter mon site portfolio personnel. L’API illustre la structure backend, les endpoints RESTful et la documentation Swagger (OpenAPI), sans utiliser de base de données.",
 
 
         //Contact Part
