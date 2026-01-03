@@ -483,6 +483,13 @@ textarea:focus {
   border-color: color-mix(in oklab, var(--accent) 45%, var(--text));
 }
 
+#contactForm,
+#contactForm * ,
+#contactForm *::before,
+#contactForm *::after {
+  box-sizing: border-box;
+}
+
 
 /* Footer */
 footer {
