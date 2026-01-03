@@ -9,7 +9,6 @@ const translations = {
         nav_projects: "PROJECTS",
         nav_contact: "CONTACT",
         hero_line: "WELCOME TO MY PORTFOLIO ✿",
-        footer_text: "©2025, All rights reserved",
         downCV: "Download CV 📥",
         typewriter1: "Mobile Application Developer",
         typewriter2: "Full-Stack Web Developer",
@@ -40,9 +39,9 @@ const translations = {
         //Contact Part
         contact_title: "GET IN TOUCH! 📍",
         contact_intro: `Got a job opportunity or a project in mind? I’d love to hear from you.
-                        <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/LeenAlHarash"><i class="fab fa-github"></i></a>
-                        <a href="https://discordid.netlify.app/?id=1077390981688729702"><i class="fab fa-discord"></i></a>`,
+                        <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/LeenAlHarash" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://discordid.netlify.app/?id=1077390981688729702" target="_blank"><i class="fab fa-discord"></i></a>`,
         contact_name_label: "Name :",
         contact_email_label: "Email :",
         contact_message_label: "Message :",
@@ -56,7 +55,6 @@ const translations = {
         nav_projects: "PROJETS",
         nav_contact: "CONTACT",
         hero_line: "BIENVENUE DANS MON PORTFOLIO ✿",
-        footer_text: "©2025, Tous droits réservés",
         downCV: "Télécharger CV 📥",
         typewriter1: "Développeuse d'applications mobiles",
         typewriter2: "Développeuse web full-stack",
@@ -89,9 +87,9 @@ const translations = {
         //Contact Part
         contact_title: "ÉCRIVEZ-MOI! 📍",
         contact_intro: `Vous avez une opportunité ou un projet en tête ? J’adorerais en entendre parler.
-                        <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/LeenAlHarash"><i class="fab fa-github"></i></a>
-                        <a href="https://discordid.netlify.app/?id=1077390981688729702"><i class="fab fa-discord"></i></a>`,
+                        <a href="https://www.linkedin.com/in/leen-al-harash-6134a0304/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/LeenAlHarash" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://discordid.netlify.app/?id=1077390981688729702" target="_blank"><i class="fab fa-discord"></i></a>`,
         contact_name_label: "Nom :",
         contact_email_label: "E-mail :",
         contact_message_label: "Message :",
