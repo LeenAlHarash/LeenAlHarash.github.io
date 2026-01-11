@@ -7,51 +7,44 @@ window.addEventListener('DOMContentLoaded', () => {
       skills: {
         html: { percent: 90, svg: "HTML" },
         css: { percent: 80, svg: "CSS" },
-        angular: { percent: 65, svg: "ANGULAR" },
+        jfx: { percent: 85, svg: "JFX" },
+        typeScript: { percent: 65, svg: "TS" },
         js: { percent: 75, svg: "JS" },
-        typeScript: { percent: 65, svg: "TS" }
       }
     },
 
     backend: {
       label: "Backend",
       skills: {
-        springB: { percent: 85, svg: "SPRINGBOOT" },
-        aspNetCore: { percent: 70, svg: "ASP.NET Core" },
-        apiInt: { percent: 80, svg: "API INTEGRATION" },        
-        php: { percent: 40, svg: "PHP" },
-      }
-    },
-
-    programming: {
-      label: "Programming",
-      skills: {
-        jfx: { percent: 85, svg: "JFX" },
         kotlin: { percent: 85, svg: "KOTLIN" },    
         sql: { percent: 75, svg: "SQL" },
+        php: { percent: 40, svg: "PHP" },
         python: { percent: 70, svg: "PYTHON" },
         javaee: { percent: 80, svg: "JAVA-EE" },
         javase: { percent: 80, svg: "JAVA-SE" },
-        cS: { percent: 45, svg: "C#" },
+        cS: { percent: 45, svg: "C#" }        
       }
     },
 
-    devops_tools: {
-      label: "DevOps & Tools",
+    frameworks: {
+      label: "Frameworks",
       skills: {
-        git: { percent: 75, svg: "GIT" },
-        docker: { percent: 75, svg: "DOCKER" },
-        ciCD: { percent: 80, svg: "CI/CD PIPELINE" },
-        linux: { percent: 75, svg: "LINUX" },
+        angular: { percent: 65, svg: "ANGULAR" },
+        springB: { percent: 85, svg: "SPRINGBOOT" },
+        aspNetCore: { percent: 70, svg: "ASP.NET Core" }
       }
     },
-
     others: {
       label: "Others",
       skills: {
         oop: { percent: 75, svg: "OOP" },
         iot: { percent: 90, svg: "IoT" },
-        unity: { percent: 90, svg: "UNITY" }
+        unity: { percent: 90, svg: "UNITY" },
+        git: { percent: 75, svg: "GIT" },
+        docker: { percent: 75, svg: "DOCKER" },
+        ciCD: { percent: 80, svg: "CI/CD PIPELINE" },
+        linux: { percent: 75, svg: "LINUX" },
+        apiInt: { percent: 80, svg: "API INTEGRATION" }
       }
     }
   };
